@@ -1,8 +1,10 @@
 package com.elwgomes.dslist.dto;
 
+
 import org.springframework.beans.BeanUtils;
 
 import com.elwgomes.dslist.entities.Game;
+import com.elwgomes.dslist.projections.GameMinProjection;
 
 public class GameMinDTO {
 
@@ -21,6 +23,16 @@ public class GameMinDTO {
 //        shortscription = entity.getShortDescription();
     }
     
+    public GameMinDTO (GameMinProjection projection) {
+        BeanUtils.copyProperties(projection, this);
+//        id = projection.getId();
+//        title = projection.getTitle();
+//        year = projection.getYear();
+//        imgUrl = projection.getImgUrl();
+//        shortscription = projection.getShortDescription();
+    }
+    
+    
     public GameMinDTO () {
         
     }
@@ -31,6 +43,26 @@ public class GameMinDTO {
         this.title = title;
         this.year = year;
         this.imgUrl = imgUrl;
+        this.shortscription = shortscription;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public void setYear(int year) {
+        this.year = year;
+    }
+
+    public void setImgUrl(String imgUrl) {
+        this.imgUrl = imgUrl;
+    }
+
+    public void setShortscription(String shortscription) {
         this.shortscription = shortscription;
     }
 
