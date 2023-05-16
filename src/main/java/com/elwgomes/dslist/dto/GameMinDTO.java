@@ -1,5 +1,7 @@
 package com.elwgomes.dslist.dto;
 
+import org.springframework.beans.BeanUtils;
+
 import com.elwgomes.dslist.entities.Game;
 
 public class GameMinDTO {
@@ -11,11 +13,12 @@ public class GameMinDTO {
     private String shortscription;
     
     public GameMinDTO (Game entity) {
-        id = entity.getId();
-        title = entity.getTitle();
-        year = entity.getYear();
-        imgUrl = entity.getImgUrl();
-        shortscription = entity.getShortDescription();
+        BeanUtils.copyProperties(entity, this);
+//        id = entity.getId();
+//        title = entity.getTitle();
+//        year = entity.getYear();
+//        imgUrl = entity.getImgUrl();
+//        shortscription = entity.getShortDescription();
     }
     
     public GameMinDTO () {
