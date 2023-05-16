@@ -10,6 +10,14 @@ public class GameMinDTO {
     private String imgUrl;
     private String shortscription;
     
+    public GameMinDTO (Game entity) {
+        id = entity.getId();
+        title = entity.getTitle();
+        year = entity.getYear();
+        imgUrl = entity.getImgUrl();
+        shortscription = entity.getShortDescription();
+    }
+    
     public GameMinDTO () {
         
     }
@@ -21,14 +29,6 @@ public class GameMinDTO {
         this.year = year;
         this.imgUrl = imgUrl;
         this.shortscription = shortscription;
-    }
-
-    public GameMinDTO (Game entity) {
-        id = entity.getId();
-        title = entity.getTitle();
-        year = entity.getYear();
-        imgUrl = entity.getImgUrl();
-        shortscription = entity.getShortDescription();
     }
 
     public Long getId() {
