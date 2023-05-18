@@ -1,0 +1,22 @@
+version: '3'
+services:
+  pgadmin:
+    container_name: pg-admin-4
+    image: dpage/pgadmin4
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=email@email.com
+      - PGADMIN_DEFAULT_PASSWORD=123456
+    ports:
+      - 7878:80
+    restart: always
+
+  postgres:
+    container_name: postgres-docker
+    image: postgres
+    environment:
+      - POSTGRES_PASSWORD=admin
+      - POSTGRES_DB=database
+    ports:
+      - 5432:5432
+    restart: always
+
