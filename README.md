@@ -15,7 +15,7 @@ Este projeto foi criado com o objetivo de adquirir conhecimento e evoluir na car
 * Backend desenvolvido com Spring Framework.
 * Banco em memória de ambiente de desenvolvimento: H2.
 * Banco de dados PostgreSQL nos ambientes de homologação e produção.
-* Bancos ambientados em contêneires.
+* Bancos ambientados em contêneires utilizando Docker.
 
 #### - Linguagens - 
 * JAVA
